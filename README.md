@@ -51,6 +51,38 @@ Resultara en:
 
 Una vez terminada la pagina se explicara cada atributo de los objetos necesarios para generar los componentes.
 
+### Section component and Create Element
+
+* **section_component** que es el componente para generar una sección, se llama desde el **index.js** se genera basado en un array de objetos.
+```js
+const objSection = [
+  {
+    id: "projects",
+    class: "section-project",
+    content: "<h2>Projectos</h2>"
+  }
+];
+innerTag.InnerTag("root", "section_component", objSection);//asi se llama
+```
+
+* **imports** contiene dos archivos
+  * **components.js** contiene todos los importas de los componentes.
+  * **functions.js** contiene los imports de las funciones.
+
+* **create_element.js** en este archivo se agregaron las funciones para poder crear un elemento/tag de HTML, de momento los datos que requiere para construirse es un array de objetos, este se estara modificando para mejorar la construcción de elementos HTML.
+```js
+const objElement = [
+  {
+    id: "name-id",
+    class: "name-class",//Acepta que sea un array de strings
+    content: "contenido del elemento"
+  }
+];
+```
+* **data** en este folder se planea agregar toda la información en diferentes idiomas.
+  * **es_messages.js** contiene los mensajes de error.
+
+
 ## Bibliografia
 *   **[Javascript Async Await, Promesas y Callbacks - Fazt](https://www.youtube.com/watch?v=Q3HtXuDEy5s)**
 *   **[XMLHttpRequest documentation](https://xhr.spec.whatwg.org/)** 

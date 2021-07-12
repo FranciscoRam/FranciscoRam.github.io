@@ -1,9 +1,9 @@
 import * as innerTag from "./../../../inner_tag.js";
-import * as setAttributes from "./../../../set_attributes.js";
+import * as setAttributes from "../../../set_attributes.js";
 
-export { FncInnerContent };
+export { InnerContent };
 
-function FncInnerContent(data){
+function InnerContent(data){
   const navComponent = document.querySelector("nav");
   const dataComponent = JSON.parse(JSON.stringify(data));
   if(data.main)
@@ -17,5 +17,5 @@ function FncInnerContent(data){
   dataComponent.class = classList;
   setAttributes.SetAttributes(navComponent, dataComponent);
   if(data.list?.items?.length > 0)
-    innerTag.FncComponentName("list_component", data.list, "navbarNavDropdown");
+    innerTag.ComponentName("list_component", data.list, "navbarNavDropdown");
 }

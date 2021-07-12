@@ -1,6 +1,6 @@
-export {FncInnerContent};
+export { InnerContent };
 
-function FncInnerContent(id, list){
+function InnerContent(id, list){
   const liClass = (list.type == "navbar") ? "nav-item": "";
   const aClass = (list.type == "navbar") ? "nav-link": "";
   // const htmlContent = "hola mundo"
@@ -18,6 +18,5 @@ function FncInnerContent(id, list){
     }
     </li>`, "");
   htmlContent = `<ul${list.type=="navbar" ? ' class="navbar-nav"': ""}>${htmlContent}</ul>`
-  console.log(htmlContent);
   document.getElementById(id).innerHTML = htmlContent;
 }
