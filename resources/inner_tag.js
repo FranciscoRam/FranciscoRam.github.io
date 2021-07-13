@@ -1,8 +1,10 @@
 import * as COMPONENTS from "./imports/components.js";
+import * as PAGES from "./imports/pages.js";
+import * as MESSAGE from "./messages.js";
 
-function InnerTag(id, component, data){
+function InnerTag(id, component, data, dir = "./resources/views/components"){
   let request = new XMLHttpRequest();
-  const route = `./resources/views/components/${component}/${component}.html` 
+  const route = `${dir}/${component}/${component}.html` 
   request.open("GET", route, true);
   request.send();
   request.onreadystatechange = () => {
@@ -29,6 +31,11 @@ function ComponentName(component, data, id = ""){
       COMPONENTS.sectionComponent.InnerContent(data);
       break;
     default:
+      try {
+        PAGES[component].InnerContent(data);
+      } catch (error) {
+        console.log(MESSAGE.MessageText("NFD003", component));
+      }
       break;
   }
 }

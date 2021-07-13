@@ -82,6 +82,40 @@ const objElement = [
 * **data** en este folder se planea agregar toda la información en diferentes idiomas.
   * **es_messages.js** contiene los mensajes de error.
 
+### Experience section
+
+Se agrego el contenido para una sección con el nombre de experiencia.
+* **es_messages.js** se modifico la estructura de los mensajes.
+* **DB** este folder contendra la información para mostrar en las vistas.
+* **pages.js** aqui estaran los imports de las vistas de paginas y no de elementos como en components, se planea que este archivo sea modificable dependiendo del proyecto que se trabaje a diferencia del **component.js**.
+* **section_component.js** se modifico para agregar una vista.
+* **pages** folder modificable dependiendo del proyecto que tendra las vistas para paginas.
+* **education, exprience, project** son vistas.
+* **create_element.js** se modifico para adaptarse al nuevo contenido.
+* **database** este archivo es para leer la información, de momento solo lee el json de DB.
+* **inner_tag.js** se agrego la opción para leer las vistas.
+* **messages.js** el archivo que manejara la devolución de mensajes.
+* **index.js** ahora el objeto para las secciones tiene un nuevo campo para leer, el campo es **page**.
+```js
+const objSection = [
+  {
+    id: "projects",
+    class: "section-project",
+    content: "<h1>Proyectos</h1>"
+  },
+  {
+    id: "experience",
+    class: "section-experience", 
+    page: {
+      title: "Experiencia",
+      name: "experience",
+      file: "es_experience.json"
+    }
+  }
+];
+```
+El Resultado hasta el momento de todos los cambios hasta este punto es:
+![Imagen de la pagina hasta el momento](./resources/images/FranciscoRamGithubIO-01.jpg)
 
 ## Bibliografia
 *   **[Javascript Async Await, Promesas y Callbacks - Fazt](https://www.youtube.com/watch?v=Q3HtXuDEy5s)**

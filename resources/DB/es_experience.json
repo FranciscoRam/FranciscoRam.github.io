@@ -1,0 +1,20 @@
+[
+  {
+    "dateIni": "02/2018",
+    "dateFin": "01/2019",
+    "direction": "",
+    "url": "http://www.metaconsultores.com.mx/",
+    "company": "Meta Consultores",
+    "position": "Desarrollador web con .Net Core + Angular",
+    "description": "Principalmente estuve migrando una aplicación de escritorio de la compañía a una aplicación web. La aplicación web tenía que generar las vistas automáticamente usando una DB, estas vistas serian condicionadas con privilegios para las funciones que el usuario tendría habilitadas"
+  },
+  {
+    "dateIni": "01/2019",
+    "dateFin": "07/2019",
+    "direction": "",
+    "url": "http://www.metaconsultores.com.mx/",
+    "company": "Meta Consultores",
+    "position": "Mantenimiento de .Net",
+    "description": "Desarrolle mantenimiento a la aplicación de escritorio de la empresa, agregando o corrigiendo errores en módulos."
+  }
+]
